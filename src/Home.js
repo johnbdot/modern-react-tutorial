@@ -12,11 +12,14 @@ const Home = () => {
       id: 3,
     },
   ]);
-  const hello = "hello!!";
 
   return (
     <div className="home">
-      <BlogList blogs={blogs} title="All Blogs!" anotherTitle={hello} />
+      <BlogList blogs={blogs} title="All Blogs!" />
+      <BlogList
+        blogs={blogs.filter((blog) => blog.author === "mario")}
+        title="Mario's blogs"
+      />
     </div>
   );
 };
